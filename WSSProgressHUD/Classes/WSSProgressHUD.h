@@ -44,5 +44,7 @@ typedef NS_ENUM(NSInteger,WSSProgressHUDStyle){
 + (void)hideHUDWithView:(UIView *)view;
 /** 隐藏 Window*/
 + (void)hideHUDWithWindow;
+/// 获取window
++ (UIWindow *)lastWindow;
 @end
 

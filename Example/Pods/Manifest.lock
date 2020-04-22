@@ -1,13 +1,13 @@
 PODS:
-  - MBProgressHUD (1.1.0)
-  - WSSProgressHUD (0.0.1):
+  - MBProgressHUD (1.2.0)
+  - WSSProgressHUD (0.0.3):
     - MBProgressHUD
 
 DEPENDENCIES:
   - WSSProgressHUD (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - MBProgressHUD
 
 EXTERNAL SOURCES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  WSSProgressHUD: cb5aa1e4bb295f22b607955a981abe2d6ef998dc
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  WSSProgressHUD: 39697b0bb9d208a654d45da4093a1427e8fac21c
 
-PODFILE CHECKSUM: c6a29b7849e51691f0a14134b804adcdaec120fe
+PODFILE CHECKSUM: cf9ce4a406e0dae1eb97be048849d25b5514239b
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.3

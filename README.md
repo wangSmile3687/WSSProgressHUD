@@ -5,11 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/WSSProgressHUD.svg?style=flat)](https://cocoapods.org/pods/WSSProgressHUD)
 [![Platform](https://img.shields.io/cocoapods/p/WSSProgressHUD.svg?style=flat)](https://cocoapods.org/pods/WSSProgressHUD)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -20,17 +15,47 @@ it, simply add the following line to your Podfile:
 pod 'WSSProgressHUD'
 ```
 
+## Example
+```
+/** 显示提示（1.5秒后消失 默认黑底白字） */
++ (void)showMessage:(NSString *)msg inView:(UIView *)view;
+/** 显示提示（N秒后消失 默认黑底白字） */
++ (void)showMessage:(NSString *)msg inView:(UIView *)view delayTime:(NSTimeInterval)delay;
+/** window显示（1.5秒后消失 默认黑底白字）*/
++ (void)showMessageWithInWindow:(NSString *)msg;
+/** window显示（N秒后消失 默认黑底白字）*/
++ (void)showMessageWithInWindow:(NSString *)msg delayTime:(NSTimeInterval)delay;
+/** 显示进度(菊花 默认黑底白字) */
++ (void)showProgressLoading:(NSString *)msg inView:(UIView *)view;
+/** 显示图片 默认黑底白字 */
++ (void)showCustomImageWithMessage:(NSString *)msg customImage:(UIImage *)customImg inview:(UIView *)view;
+/** 显示自定义动画 默认黑底白字 */
++ (void)showCustomAnimationWithMessage:(NSString *)msg withImgArry:(NSArray<UIImage *> *)imgArry inview:(UIView *)view;
+/** 显示提示（1.5秒后消失） */
++ (void)showMessage:(NSString *)msg inView:(UIView *)view style:(WSSProgressHUDStyle)style;
+/** 显示提示（N秒后消失） */
++ (void)showMessage:(NSString *)msg inView:(UIView *)view delayTime:(NSTimeInterval)delay style:(WSSProgressHUDStyle)style;
+/** window显示（1.5秒后消失）*/
++ (void)showMessageWithInWindow:(NSString *)msg style:(WSSProgressHUDStyle)style;
+/** window显示（N秒后消失）*/
++ (void)showMessageWithInWindow:(NSString *)msg delayTime:(NSTimeInterval)delay style:(WSSProgressHUDStyle)style;
+/** 显示进度(菊花) */
++ (void)showProgressLoading:(NSString *)msg inView:(UIView *)view style:(WSSProgressHUDStyle)style;
+/** 显示图片 */
++ (void)showCustomImageWithMessage:(NSString *)msg customImage:(UIImage *)customImg inview:(UIView *)view style:(WSSProgressHUDStyle)style;
+/** 显示自定义动画 */
++ (void)showCustomAnimationWithMessage:(NSString *)msg withImgArry:(NSArray<UIImage *> *)imgArry inview:(UIView *)view style:(WSSProgressHUDStyle)style;
+/** 隐藏 */
++ (void)hideHUDWithView:(UIView *)view;
+/** 隐藏 Window*/
++ (void)hideHUDWithWindow;
 
-//    [WSSProgressHUD showMessageWithInWindow:@"hahahhah"];
-
-//    [WSSProgressHUD showCustomImageWithMessage:@"哈哈哈哈" customImage:[UIImage imageNamed:@"animation1"] inview:self.view];
-
-//    [WSSProgressHUD showCustomAnimationWithMessage:@"嗯嗯嗯讷讷呢" withImgArry:@[[UIImage imageNamed:@"animation1"],[UIImage imageNamed:@"animation2"],[UIImage imageNamed:@"animation3"]] inview:self.view];
+```
 
 
 ## Author
 
-wangsi,18566663687@163.com
+wangsi,17601013687@163.com
 
 ## License
 

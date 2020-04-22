@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "880F11BD347D07CD6FCB3A29F8A70332"
-               BuildableName = "Pods-WSSProgressHUD_Tests.framework"
+               BuildableName = "libPods-WSSProgressHUD_Tests.a"
                BlueprintName = "Pods-WSSProgressHUD_Tests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

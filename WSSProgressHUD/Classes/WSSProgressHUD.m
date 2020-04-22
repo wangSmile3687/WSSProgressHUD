@@ -77,6 +77,7 @@ typedef NS_ENUM(NSInteger,WSSProgressHUDMode){
     } else {
         hud.bezelView.color = [UIColor colorWithWhite:0.f alpha:0.8f];
         hud.contentColor = [UIColor whiteColor];
+        hud.bezelView.blurEffectStyle = UIBlurEffectStyleLight;
     }
     switch (mode) {
         case WSSProgressModeHUDOnlyText:{
