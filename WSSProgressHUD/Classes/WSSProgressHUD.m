@@ -47,10 +47,10 @@ typedef NS_ENUM(NSInteger,WSSProgressHUDMode){
     [self showMessage:msg inView:view delayTime:delay customImage:nil mode:WSSProgressModeHUDOnlyText style:style];
 }
 + (void)showMessageWithInWindow:(NSString *)msg style:(WSSProgressHUDStyle)style {
-    [self showMessage:msg inView:[self lastWindow] delayTime:1.5 customImage:nil mode:WSSProgressModeHUDOnlyText style:style];
+    [self showMessage:msg inView:[self applicationWindow] delayTime:1.5 customImage:nil mode:WSSProgressModeHUDOnlyText style:style];
 }
 + (void)showMessageWithInWindow:(NSString *)msg delayTime:(NSTimeInterval)delay style:(WSSProgressHUDStyle)style {
-    [self showMessage:msg inView:[self lastWindow] delayTime:delay customImage:nil mode:WSSProgressModeHUDOnlyText style:style];
+    [self showMessage:msg inView:[self applicationWindow] delayTime:delay customImage:nil mode:WSSProgressModeHUDOnlyText style:style];
 }
 + (void)showProgressLoading:(NSString *)msg inView:(UIView *)view style:(WSSProgressHUDStyle)style {
     [self showMessage:msg inView:view delayTime:0 customImage:nil mode:WSSProgressModeHUDLoading style:style];
@@ -106,7 +106,7 @@ typedef NS_ENUM(NSInteger,WSSProgressHUDMode){
     [MBProgressHUD hideHUDForView:view animated:YES];
 }
 + (void)hideHUDWithWindow {
-    [MBProgressHUD hideHUDForView:(UIView *)[self lastWindow] animated:YES];
+    [MBProgressHUD hideHUDForView:(UIView *)[self applicationWindow] animated:YES];
 }
 + (MBProgressHUD*)createMBProgressHUDWithMessage:(NSString*)message inView:(UIView *)view {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -119,13 +119,13 @@ typedef NS_ENUM(NSInteger,WSSProgressHUDMode){
     hud.removeFromSuperViewOnHide = YES;
     return hud;
 }
-+ (UIWindow *)lastWindow{
-    NSArray *windows = [UIApplication sharedApplication].windows;
-    for(UIWindow *window in [windows reverseObjectEnumerator]) {
-        if ([window isKindOfClass:[UIWindow class]] &&
-            CGRectEqualToRect(window.bounds, [UIScreen mainScreen].bounds))
-            return window;
++ (UIWindow *)applicationWindow {
+    UIWindow *applicationWindow;
+    if ([[[UIApplication sharedApplication] delegate] respondsToSelector:@selector(window)]) {
+        applicationWindow = [[[UIApplication sharedApplication] delegate] window];
+    } else {
+        applicationWindow = [[UIApplication sharedApplication] keyWindow];
     }
-    return [UIApplication sharedApplication].keyWindow;
+    return applicationWindow;
 }
 @end

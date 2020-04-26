@@ -1,6 +1,6 @@
 PODS:
   - MBProgressHUD (1.2.0)
-  - WSSProgressHUD (0.0.3):
+  - WSSProgressHUD (0.0.4):
     - MBProgressHUD
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  WSSProgressHUD: 39697b0bb9d208a654d45da4093a1427e8fac21c
+  WSSProgressHUD: 87be0f23fc1c256bb78ea23cda48d1b0f4c8566d
 
 PODFILE CHECKSUM: cf9ce4a406e0dae1eb97be048849d25b5514239b
 
